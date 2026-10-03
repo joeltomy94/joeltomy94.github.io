@@ -1,0 +1,6 @@
+<!doctype html><meta name=viewport content="width=device-width,initial-scale=1"><title>Tesla code</title>
+<body style="font-family:sans-serif;max-width:560px;margin:40px auto;padding:0 16px">
+<h2>Almost done</h2><p id=m>Copy this code and paste it into the secure box Tyla sent you. It expires in a few minutes.</p>
+<textarea id=t readonly style="width:100%;height:90px;font-size:15px"></textarea>
+<script>var q=new URLSearchParams(location.search);var c=q.get('code');var t=document.getElementById('t');
+if(c){t.value=c;t.select();}else{document.getElementById('m').textContent='No code came back: '+(q.get('error_description')||q.get('error')||'unknown');t.style.display='none';}</script>

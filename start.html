@@ -1,0 +1,8 @@
+<!doctype html><meta name=viewport content="width=device-width,initial-scale=1"><title>Connect Tesla</title>
+<body style="font-family:sans-serif;max-width:480px;margin:40px auto;padding:0 16px">
+<h2>Connect your Tesla</h2><p>Paste your Tesla app's Client ID, then sign in to Tesla and approve access.</p>
+<input id=c placeholder="Client ID" style="width:100%;padding:8px;font-size:16px"><br><br>
+<button onclick="go()" style="padding:10px 16px;font-size:16px">Continue to Tesla</button>
+<script>function go(){var c=document.getElementById('c').value.trim();if(!c)return;
+var p=new URLSearchParams({response_type:'code',client_id:c,redirect_uri:'https://joeltomy94.github.io/callback',scope:'openid offline_access vehicle_device_data vehicle_charging_cmds',state:Math.random().toString(36).slice(2),prompt_missing_scopes:'true'});
+location.href='https://auth.tesla.com/oauth2/v3/authorize?'+p;}</script>
